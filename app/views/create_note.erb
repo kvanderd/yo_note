@@ -1,0 +1,6 @@
+<form action="/note/create" method="post">
+  <input type="text" name="note[title]" placeholder="title" required>
+  <textarea cols="50" rows="5" name="note[body]" placeholder="Make Your Note" required></textarea>
+  <input type="hidden" name="user_id" value="<%= @user.id %>">
+  <input type="submit" value="create note">
+</form>

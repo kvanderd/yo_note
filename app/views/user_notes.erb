@@ -1,0 +1,8 @@
+<h3>Hello : <%= @user.username %></h3>
+<% @user.notes.each do |note| %>
+<h3>Title: <%= note.title %></h3><a href='/note/<%=note.id%>'>Edit</a>
+<p> Body: <%= note.body %><p>
+<% end %>
+
+
+  
