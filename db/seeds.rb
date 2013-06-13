@@ -3,8 +3,3 @@
               password:   'password')
 end
 
-50.times do 
-  Note.create(title:   Faker::Lorem.sentence,
-              body:    Faker::Lorem.sentence,
-              user_id: rand(1..20))
-end

@@ -1,7 +1,10 @@
-<h2>Welcome To Create A Note</h2>
-<h3> Here are some Recent Notes </h3>
 
-<% @notes.each do |note| %>
-</h3><%= note.title %><h3>
-<p><%= note.body %></p>
-<% end %>
+ <% if logged_in? %>
+ <h2>You're logged in</h2>
+<p>HI</p><%= @user.username %>
+<% else %>
+
+<h2>Welcome To Create A Note</h2>
+<p>Login or Create An Account To Make Notes</p>
+
+<%end%>

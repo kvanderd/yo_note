@@ -1,6 +1,6 @@
 def current_user
-  if session[:user_id]
-    @current_user ||= User.find(session[:user_id])
+  if session[:id]
+    @current_user ||= User.find(session[:id])
   end
 end
 
@@ -9,5 +9,5 @@ def logged_in?
 end
 
 def create_session(user)
-  session[:user_id] = user.id if user
+  session[:id] = user.id if user
 end
