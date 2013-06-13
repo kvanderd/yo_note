@@ -20,7 +20,6 @@
   <header>
     <nav>
       <% if logged_in? %>
-        <a href="/note/create">Create<a>
         <a href="/user/<%= @current_user.id %>">Profile/All Notes</a>
         <a href="/user/logout">logout</a>
       <% else %>

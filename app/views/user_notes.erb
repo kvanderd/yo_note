@@ -1,8 +1,15 @@
 <h3>Hello : <%= @user.username %></h3>
 <% @user.notes.each do |note| %>
-<h3>Title: <%= note.title %></h3><a href='/note/<%=note.id%>'>Edit</a>
+<h3>Title: <%= note.title %></h3>
 <p> Body: <%= note.body %><p>
+<p><a href='/note/<%=note.id%>/edit'>Edit</a></p>
+<p><a href='/note/<%=note.id%>/delete'>Delete</a></p>
 <% end %>
 
-
-  
+<h2>Make a new note</h2>
+<form action="/note/create/<%= @user.id %>" method="post">
+  <input type="text" name="note[title]" placeholder="title" required>
+  <textarea cols="50" rows="5" name="note[body]" placeholder="Make Your Note" required></textarea>
+  <!-- <input type="hidden" name="user_id" value="<%= @user.id %>"> -->
+  <input type="submit" value="create note">
+</form>

@@ -1,4 +1,4 @@
-get '/notes/:id/delete' do
+get '/note/:id/delete' do
   @note = Note.find(params[:id])
     erb :delete_note
 end

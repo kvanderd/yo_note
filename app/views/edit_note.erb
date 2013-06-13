@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Edit A Note</h1>
-   <form action='/note/<%=@note.id%>' method='post'>
+   <form action='/note/<%= note.id%>' method='post'>
     <input type="text" name="note" placeholder="Type your note here" required value="<%=@note.note%>">
     <input type="submit" value="Save Edited Note">
   </form>
